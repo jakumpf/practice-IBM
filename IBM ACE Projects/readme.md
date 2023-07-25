@@ -1,5 +1,7 @@
-#IBM ACE Projects
+# IBM ACE Projects
 
-REST - CurrencyAPI:
-getCurreny - GET
-getCurrencies - POST
+## REST 
+
+CurrencyAPI: \
+/getCurreny - GET \
+/getCurrencies - POST
