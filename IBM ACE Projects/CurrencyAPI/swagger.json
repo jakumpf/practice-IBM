@@ -1,0 +1,120 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "CurrencyAPI",
+    "version" : "1.0.0",
+    "description" : "CurrencyAPI"
+  },
+  "paths" : {
+    "/getCurrency" : {
+      "get" : {
+        "operationId" : "getCurrency",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/getCurrencyResponse"
+            }
+          },
+          "500" : {
+            "description" : "NOT OK",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve getCurrency",
+        "parameters" : [ {
+          "name" : "currency",
+          "in" : "query",
+          "type" : "string"
+        } ]
+      }
+    },
+    "/getCurrencies" : {
+      "post" : {
+        "operationId" : "postGetCurrencies",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "500" : {
+            "description" : "NOT OK",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Insert a getCurrencies",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "$ref" : "#/definitions/getCurrenciesRequest"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/currencyapi/v1",
+  "definitions" : {
+    "getCurrencyResponse" : {
+      "type" : "object",
+      "properties" : {
+        "currency" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number"
+        }
+      }
+    },
+    "ErrorResponse" : {
+      "type" : "object",
+      "properties" : {
+        "errorId" : {
+          "type" : "integer"
+        },
+        "errorMessage" : {
+          "type" : "string"
+        },
+        "errorCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "getCurrenciesResponse" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "currency" : {
+            "type" : "string"
+          },
+          "amount" : {
+            "type" : "number"
+          }
+        }
+      }
+    },
+    "getCurrenciesRequest" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "currency" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

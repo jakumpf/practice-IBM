@@ -1,0 +1,16 @@
+
+
+CREATE COMPUTE MODULE postGetCurrencies_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.JSON.Data = InputRoot.JSON.Data;
+		SET Environment.Variables.JSON.Data = OutputRoot.JSON.Data;
+		SET OutputRoot.Properties.CodedCharSetId = 1208;
+   		SET OutputRoot.Properties.Encoding = 546;
+   		SET OutputRoot.HTTPRequestHeader."Content-Type" = 'application/json; charset=utf-8';
+		RETURN TRUE;
+	END;
+
+	
+	
+END MODULE;

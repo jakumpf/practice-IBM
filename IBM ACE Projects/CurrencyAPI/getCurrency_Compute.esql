@@ -1,0 +1,14 @@
+
+
+CREATE COMPUTE MODULE getCurrency_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+	DECLARE input REFERENCE TO InputRoot.JSON.Data;
+		
+	SET OutputRoot.JSON.Data.Currency = input.currency;
+	SET OutputRoot.JSON.Data.Amount = CAST(input.amount AS DECIMAL);
+		
+		RETURN TRUE;
+	END;
+END MODULE;

@@ -1,0 +1,23 @@
+CREATE COMPUTE MODULE postGetCurrencies_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CREATE FIELD OutputRoot.JSON.Data IDENTITY(JSON.Array); 
+		DECLARE i INTEGER 1;
+		FOR element AS Environment.Variables.JSON.Data.Item[] DO
+			DECLARE j INTEGER 1;
+			FOR elementMock AS InputRoot.JSON.Data.Item[] DO
+					IF element.currency = elementMock.currency THEN
+						SET OutputRoot.JSON.Data.Item[i].currencies=element.currency;
+						SET OutputRoot.JSON.Data.Item[i].amount= CAST (elementMock.amount AS DECIMAL);	
+						CREATE FIELD OutputRoot.JSON.Data.Item[i].countries IDENTITY(JSON.Array); 
+						FOR countryMock AS elementMock.countries.Item[] DO
+								SET OutputRoot.JSON.Data.Item[i].countries.Item[j].country = countryMock;
+								SET j = j + 1;
+						END FOR;
+						SET i = i + 1;
+					END IF;
+			END FOR;
+		END FOR;
+		RETURN TRUE;
+	END;		
+END MODULE;

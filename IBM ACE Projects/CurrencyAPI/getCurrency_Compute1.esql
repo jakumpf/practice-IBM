@@ -1,0 +1,34 @@
+
+
+CREATE COMPUTE MODULE getCurrency_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inputReq REFERENCE TO InputLocalEnvironment.HTTP.Input.QueryString;
+		DECLARE errorMessage CHAR;
+		DECLARE errorMessageRef REFERENCE TO errorMessage;
+		CALL inputValidation(errorMessageRef,inputReq);
+		
+		IF errorMessage is NULL THEN
+			SET OutputRoot.JSON.Data.currency=inputReq.currency;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+	   		SET OutputRoot.Properties.Encoding = 546;
+	   		SET OutputRoot.HTTPRequestHeader."Content-Type" = 'application/json; charset=utf-8';
+	   		PROPAGATE TO TERMINAL 'out';
+	   		RETURN FALSE;
+		ELSE
+			SET OutputRoot.JSON.Data.errorId = 1;
+			SET OutputRoot.JSON.Data.errorMessage = 'inputRequest is NULL';
+			SET OutputRoot.JSON.Data.errorDetails = '400';
+			SET OutputLocalEnvironment.Destination.HTTP.ReplyStatusCode = 400;
+			PROPAGATE TO TERMINAL 'out1';
+			RETURN FALSE;
+		END IF;	
+	END;
+	CREATE FUNCTION inputValidation(INOUT errorMessage REFERENCE, IN inputReq REFERENCE)
+		BEGIN
+		IF inputReq.currency is NULL THEN
+			SET errorMessage= 'Currency is empty';
+		END IF;
+	END;
+
+END MODULE;
