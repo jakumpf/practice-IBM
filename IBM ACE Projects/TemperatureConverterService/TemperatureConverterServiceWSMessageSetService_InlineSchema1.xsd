@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:mrm="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                                                                                                                                        <xsd:complexType name="ErrorMessage">
+        <xsd:sequence>
+          <xsd:element name="errorCode" type="xsd:int"/>
+          <xsd:element name="errorMessage" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:element ibmSchExtn:docRoot="true" name="ErrorMessage" type="mrm:ErrorMessage"/>
+            <xsd:complexType name="GetCelsiusToFahrenheitRequest">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetCelsiusToFahrenheitResponse">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetFahrenheitToCelsiusRequest">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetFahrenheitToCelsiusResponse">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetWindChillInCelsiusRequest">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+          <xsd:element ref="mrm:WindSpeed"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetWindChillInCelsiusResponse">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetWindChillInFahrenheitRequest">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+          <xsd:element ref="mrm:WindSpeed"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="GetWindChillInFahrenheitResponse">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Temperature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetCelsiusToFahrenheitRequest" type="mrm:GetCelsiusToFahrenheitRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetCelsiusToFahrenheitResponse" type="mrm:GetCelsiusToFahrenheitResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetFahrenheitToCelsiusRequest" type="mrm:GetFahrenheitToCelsiusRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetFahrenheitToCelsiusResponse" type="mrm:GetFahrenheitToCelsiusResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInCelsiusRequest" type="mrm:GetWindChillInCelsiusRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInCelsiusResponse" type="mrm:GetWindChillInCelsiusResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInFahrenheitRequest" type="mrm:GetWindChillInFahrenheitRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInFahrenheitResponse" type="mrm:GetWindChillInFahrenheitResponse"/>
+            <xsd:element name="Temperature" type="xsd:int"/>
+            <xsd:element name="WindSpeed" type="xsd:int"/>
+        </xsd:schema>

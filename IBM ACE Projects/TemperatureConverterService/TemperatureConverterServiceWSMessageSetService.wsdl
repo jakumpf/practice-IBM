@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="TemperatureConverterServiceWSMessageSet" targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="TemperatureConverterServiceWSMessageSetService_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:mrm="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+<xsd:include schemaLocation="TemperatureConverterServiceWSMessageSetService_InlineSchema1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCelsiusToFahrenheit_in">
+    <wsdl:part element="GetCelsiusToFahrenheitRequest" name="GetCelsiusToFahrenheitRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetCelsiusToFahrenheit_out">
+    <wsdl:part element="GetCelsiusToFahrenheitResponse" name="GetCelsiusToFahrenheitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCelsiusToFahrenheit_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_in">
+    <wsdl:part element="GetWindChillInCelsiusRequest" name="GetWindChillInCelsiusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_out">
+    <wsdl:part element="GetWindChillInCelsiusResponse" name="GetWindChillInCelsiusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_in">
+    <wsdl:part element="GetFahrenheitToCelsiusRequest" name="GetFahrenheitToCelsiusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_out">
+    <wsdl:part element="GetFahrenheitToCelsiusResponse" name="GetFahrenheitToCelsiusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_in">
+    <wsdl:part element="GetWindChillInFahrenheitRequest" name="GetWindChillInFahrenheitRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_out">
+    <wsdl:part element="GetWindChillInFahrenheitResponse" name="GetWindChillInFahrenheitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="TemperatureConverterServiceWSMessageSetPortType">
+    <wsdl:operation name="GetCelsiusToFahrenheit">
+      <wsdl:input message="GetCelsiusToFahrenheit_in" name="GetCelsiusToFahrenheit_Input"/>
+      <wsdl:output message="GetCelsiusToFahrenheit_out" name="GetCelsiusToFahrenheit_Output"/>
+      <wsdl:fault message="GetCelsiusToFahrenheit_fault1" name="GetCelsiusToFahrenheit_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnCelsius">
+      <wsdl:input message="GetWindChilllnCelsius_in" name="GetWindChilllnCelsius_Input"/>
+      <wsdl:output message="GetWindChilllnCelsius_out" name="GetWindChilllnCelsius_Output"/>
+      <wsdl:fault message="GetWindChilllnCelsius_fault1" name="GetWindChilllnCelsius_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFahrenheitToCelsius">
+      <wsdl:input message="GetFahrenheitToCelsius_in" name="GetFahrenheitToCelsius_Input"/>
+      <wsdl:output message="GetFahrenheitToCelsius_out" name="GetFahrenheitToCelsius_Output"/>
+      <wsdl:fault message="GetFahrenheitToCelsius_fault1" name="GetFahrenheitToCelsius_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnFahrenheit">
+      <wsdl:input message="GetWindChilllnFahrenheit_in" name="GetWindChilllnFahrenheit_Input"/>
+      <wsdl:output message="GetWindChilllnFahrenheit_out" name="GetWindChilllnFahrenheit_Output"/>
+      <wsdl:fault message="GetWindChilllnFahrenheit_fault1" name="GetWindChilllnFahrenheit_Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" type="TemperatureConverterServiceWSMessageSetPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCelsiusToFahrenheit">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetCelsiusToFahrenheit_Input">
+        <soap:body parts="GetCelsiusToFahrenheitRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetCelsiusToFahrenheit_Output">
+        <soap:body parts="GetCelsiusToFahrenheitResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetCelsiusToFahrenheit_Fault">
+        <soap:fault name="GetCelsiusToFahrenheit_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnCelsius">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetWindChilllnCelsius_Input">
+        <soap:body parts="GetWindChillInCelsiusRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWindChilllnCelsius_Output">
+        <soap:body parts="GetWindChillInCelsiusResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetWindChilllnCelsius_Fault">
+        <soap:fault name="GetWindChilllnCelsius_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFahrenheitToCelsius">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetFahrenheitToCelsius_Input">
+        <soap:body parts="GetFahrenheitToCelsiusRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetFahrenheitToCelsius_Output">
+        <soap:body parts="GetFahrenheitToCelsiusResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetFahrenheitToCelsius_Fault">
+        <soap:fault name="GetFahrenheitToCelsius_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnFahrenheit">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetWindChilllnFahrenheit_Input">
+        <soap:body parts="GetWindChillInFahrenheitRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWindChilllnFahrenheit_Output">
+        <soap:body parts="GetWindChillInFahrenheitResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetWindChilllnFahrenheit_Fault">
+        <soap:fault name="GetWindChilllnFahrenheit_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service">
+    <wsdl:port binding="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

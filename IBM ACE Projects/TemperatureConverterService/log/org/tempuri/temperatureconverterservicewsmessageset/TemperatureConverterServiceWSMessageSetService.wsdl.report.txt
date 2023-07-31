@@ -1,0 +1,35 @@
+
+
+Importing file: C:\Users\jbrzozowski\IBM\ACET12\workspace\TemperatureConverterServiceWSMessageSet\TemperatureConverterServiceWSMessageSetService.wsdl
+
+Copying source WSDL TemperatureConverterServiceWSMessageSetService.wsdl to TemperatureConverterServiceWSMessageSetService.wsdl.
+The WSDL import will proceed with bindings TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/jbrzozowski/IBM/ACET12/workspace/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetService.wsdl.
+Parsing wsdl binding {http://tempuri.org/TemperatureConverterServiceWSMessageSet}TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding.
+Parsing wsdl binding input GetCelsiusToFahrenheit.
+Parsing wsdl binding output GetCelsiusToFahrenheit.
+Parsing wsdl binding fault GetCelsiusToFahrenheit_Fault.
+Parsing wsdl binding input GetWindChilllnCelsius.
+Parsing wsdl binding output GetWindChilllnCelsius.
+Parsing wsdl binding fault GetWindChilllnCelsius_Fault.
+Parsing wsdl binding input GetFahrenheitToCelsius.
+Parsing wsdl binding output GetFahrenheitToCelsius.
+Parsing wsdl binding fault GetFahrenheitToCelsius_Fault.
+Parsing wsdl binding input GetWindChilllnFahrenheit.
+Parsing wsdl binding output GetWindChilllnFahrenheit.
+Parsing wsdl binding fault GetWindChilllnFahrenheit_Fault.
+Processing doc style for operation GetCelsiusToFahrenheit.
+Processing doc style for operation GetWindChilllnCelsius.
+Processing doc style for operation GetFahrenheitToCelsius.
+Processing doc style for operation GetWindChilllnFahrenheit.
+Populating WSDL schema TemperatureConverterServiceWSMessageSetService.xsd.
+Creating file TemperatureConverterServiceWSMessageSetService.xsd in the workspace.
+Creating file TemperatureConverterServiceWSMessageSetService_InlineSchema1.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.167 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
