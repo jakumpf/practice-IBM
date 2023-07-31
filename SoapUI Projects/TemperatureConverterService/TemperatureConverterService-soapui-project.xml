@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3250bcef-c691-41f1-95a6-da699ee728b7" activeEnvironment="Default" name="TemperatureConverterService" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="826fc2c9-9d5a-4a83-9cb9-bc0790111e4c" wsaVersion="NONE" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" type="wsdl" bindingName="{http://tempuri.org/TemperatureConverterServiceWSMessageSet}TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" soapVersion="1_1" anonymous="optional" definition="http://2V9M3X2.SIIPOLSKA.PL:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://2V9M3X2.SIIPOLSKA.PL:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service?wsdl"><con:part><con:url>http://2V9M3X2.SIIPOLSKA.PL:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service?wsdl</con:url><con:content><![CDATA[<!--File TemperatureConverterServiceWSMessageSetService.wsdl, application TemperatureConverterService-->
+<wsdl:definitions name="TemperatureConverterServiceWSMessageSet" targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="TemperatureConverterServiceWSMessageSetService_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:mrm="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+      <xsd:include schemaLocation="http://2V9M3X2.SIIPOLSKA.PL:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service?xsd=xsd0"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCelsiusToFahrenheit_in">
+    <wsdl:part element="GetCelsiusToFahrenheitRequest" name="GetCelsiusToFahrenheitRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetCelsiusToFahrenheit_out">
+    <wsdl:part element="GetCelsiusToFahrenheitResponse" name="GetCelsiusToFahrenheitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCelsiusToFahrenheit_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_in">
+    <wsdl:part element="GetWindChillInCelsiusRequest" name="GetWindChillInCelsiusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_out">
+    <wsdl:part element="GetWindChillInCelsiusResponse" name="GetWindChillInCelsiusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnCelsius_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_in">
+    <wsdl:part element="GetFahrenheitToCelsiusRequest" name="GetFahrenheitToCelsiusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_out">
+    <wsdl:part element="GetFahrenheitToCelsiusResponse" name="GetFahrenheitToCelsiusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFahrenheitToCelsius_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_in">
+    <wsdl:part element="GetWindChillInFahrenheitRequest" name="GetWindChillInFahrenheitRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_out">
+    <wsdl:part element="GetWindChillInFahrenheitResponse" name="GetWindChillInFahrenheitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWindChilllnFahrenheit_fault1">
+    <wsdl:part element="ErrorMessage" name="ErrorMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="TemperatureConverterServiceWSMessageSetPortType">
+    <wsdl:operation name="GetCelsiusToFahrenheit">
+      <wsdl:input message="GetCelsiusToFahrenheit_in" name="GetCelsiusToFahrenheit_Input"/>
+      <wsdl:output message="GetCelsiusToFahrenheit_out" name="GetCelsiusToFahrenheit_Output"/>
+      <wsdl:fault message="GetCelsiusToFahrenheit_fault1" name="GetCelsiusToFahrenheit_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnCelsius">
+      <wsdl:input message="GetWindChilllnCelsius_in" name="GetWindChilllnCelsius_Input"/>
+      <wsdl:output message="GetWindChilllnCelsius_out" name="GetWindChilllnCelsius_Output"/>
+      <wsdl:fault message="GetWindChilllnCelsius_fault1" name="GetWindChilllnCelsius_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFahrenheitToCelsius">
+      <wsdl:input message="GetFahrenheitToCelsius_in" name="GetFahrenheitToCelsius_Input"/>
+      <wsdl:output message="GetFahrenheitToCelsius_out" name="GetFahrenheitToCelsius_Output"/>
+      <wsdl:fault message="GetFahrenheitToCelsius_fault1" name="GetFahrenheitToCelsius_Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnFahrenheit">
+      <wsdl:input message="GetWindChilllnFahrenheit_in" name="GetWindChilllnFahrenheit_Input"/>
+      <wsdl:output message="GetWindChilllnFahrenheit_out" name="GetWindChilllnFahrenheit_Output"/>
+      <wsdl:fault message="GetWindChilllnFahrenheit_fault1" name="GetWindChilllnFahrenheit_Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" type="TemperatureConverterServiceWSMessageSetPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCelsiusToFahrenheit">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetCelsiusToFahrenheit_Input">
+        <soap:body parts="GetCelsiusToFahrenheitRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetCelsiusToFahrenheit_Output">
+        <soap:body parts="GetCelsiusToFahrenheitResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetCelsiusToFahrenheit_Fault">
+        <soap:fault name="GetCelsiusToFahrenheit_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnCelsius">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetWindChilllnCelsius_Input">
+        <soap:body parts="GetWindChillInCelsiusRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWindChilllnCelsius_Output">
+        <soap:body parts="GetWindChillInCelsiusResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetWindChilllnCelsius_Fault">
+        <soap:fault name="GetWindChilllnCelsius_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFahrenheitToCelsius">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetFahrenheitToCelsius_Input">
+        <soap:body parts="GetFahrenheitToCelsiusRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetFahrenheitToCelsius_Output">
+        <soap:body parts="GetFahrenheitToCelsiusResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetFahrenheitToCelsius_Fault">
+        <soap:fault name="GetFahrenheitToCelsius_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindChilllnFahrenheit">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetWindChilllnFahrenheit_Input">
+        <soap:body parts="GetWindChillInFahrenheitRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWindChilllnFahrenheit_Output">
+        <soap:body parts="GetWindChillInFahrenheitResponse" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetWindChilllnFahrenheit_Fault">
+        <soap:fault name="GetWindChilllnFahrenheit_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service">
+    <wsdl:port binding="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://2V9M3X2.SIIPOLSKA.PL:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service?xsd=xsd0</con:url><con:content><![CDATA[<!--File TemperatureConverterServiceWSMessageSetService_InlineSchema1.xsd, application TemperatureConverterService-->
+<xsd:schema targetNamespace="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:mrm="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/TemperatureConverterServiceWSMessageSet" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <xsd:complexType name="ErrorMessage">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:int"/>
+      <xsd:element name="errorMessage" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element ibmSchExtn:docRoot="true" name="ErrorMessage" type="mrm:ErrorMessage"/>
+  <xsd:complexType name="GetCelsiusToFahrenheitRequest">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetCelsiusToFahrenheitResponse">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetFahrenheitToCelsiusRequest">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetFahrenheitToCelsiusResponse">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetWindChillInCelsiusRequest">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+      <xsd:element ref="mrm:WindSpeed"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetWindChillInCelsiusResponse">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetWindChillInFahrenheitRequest">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+      <xsd:element ref="mrm:WindSpeed"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GetWindChillInFahrenheitResponse">
+    <xsd:sequence>
+      <xsd:element ref="mrm:Temperature"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetCelsiusToFahrenheitRequest" type="mrm:GetCelsiusToFahrenheitRequest"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetCelsiusToFahrenheitResponse" type="mrm:GetCelsiusToFahrenheitResponse"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetFahrenheitToCelsiusRequest" type="mrm:GetFahrenheitToCelsiusRequest"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetFahrenheitToCelsiusResponse" type="mrm:GetFahrenheitToCelsiusResponse"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInCelsiusRequest" type="mrm:GetWindChillInCelsiusRequest"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInCelsiusResponse" type="mrm:GetWindChillInCelsiusResponse"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInFahrenheitRequest" type="mrm:GetWindChillInFahrenheitRequest"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="GetWindChillInFahrenheitResponse" type="mrm:GetWindChillInFahrenheitResponse"/>
+  <xsd:element name="Temperature" type="xsd:int"/>
+  <xsd:element name="WindSpeed" type="xsd:int"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://2V9M3X2:8088/mockTemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding</con:endpoint><con:endpoint>http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service</con:endpoint></con:endpoints><con:operation id="e8b6fb53-2ec4-42bf-9a56-c0e217a1b9e3" isOneWay="false" action="" name="GetCelsiusToFahrenheit" bindingOperationName="GetCelsiusToFahrenheit" type="Request-Response" outputName="GetCelsiusToFahrenheit_Output" inputName="GetCelsiusToFahrenheit_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="86328a4e-c5ce-4dcc-8ea6-4cbf8b49f454" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetCelsiusToFahrenheitRequest>\r
+         <tem:Temperature>12</tem:Temperature>\r
+      </tem:GetCelsiusToFahrenheitRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetCelsiusToFahrenheit_Input"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="820ef92d-5645-4ffb-8658-77ecec0aa512" isOneWay="false" action="" name="GetFahrenheitToCelsius" bindingOperationName="GetFahrenheitToCelsius" type="Request-Response" outputName="GetFahrenheitToCelsius_Output" inputName="GetFahrenheitToCelsius_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e6da8160-6cfa-4d14-8f61-17c6b67feb1e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetFahrenheitToCelsiusRequest>\r
+         <tem:Temperature>?</tem:Temperature>\r
+      </tem:GetFahrenheitToCelsiusRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetFahrenheitToCelsius_Input"/></con:call></con:operation><con:operation id="0f22c0bb-404e-4665-b6b9-45470dd3c0b4" isOneWay="false" action="" name="GetWindChilllnCelsius" bindingOperationName="GetWindChilllnCelsius" type="Request-Response" outputName="GetWindChilllnCelsius_Output" inputName="GetWindChilllnCelsius_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2cb0632-ce83-451c-81e8-1a455113b595" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetWindChillInCelsiusRequest>\r
+         <tem:Temperature>?</tem:Temperature>\r
+         <tem:WindSpeed>?</tem:WindSpeed>\r
+      </tem:GetWindChillInCelsiusRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetWindChilllnCelsius_Input"/></con:call></con:operation><con:operation id="6724083d-8938-45b2-aa51-ea8e8f32cd9f" isOneWay="false" action="" name="GetWindChilllnFahrenheit" bindingOperationName="GetWindChilllnFahrenheit" type="Request-Response" outputName="GetWindChilllnFahrenheit_Output" inputName="GetWindChilllnFahrenheit_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7786e6f3-3b9d-48f9-a144-f4d560bf240e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/TemperatureConverterServiceWSMessageSetSOAP_HTTP_Service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetWindChillInFahrenheitRequest>\r
+         <tem:Temperature>?</tem:Temperature>\r
+         <tem:WindSpeed>?</tem:WindSpeed>\r
+      </tem:GetWindChillInFahrenheitRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetWindChilllnFahrenheit_Input"/></con:call></con:operation></con:interface><con:mockService id="26c1574e-4bf8-4cdb-8e87-99ed7c4b4951" port="8088" path="/mockTemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" host="2V9M3X2" name="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCelsiusToFahrenheit" id="6e3a3915-5afe-4014-b46e-9ca90f61d669" interface="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" operation="GetCelsiusToFahrenheit"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="b4d73f22-13cd-46e4-9f95-12002b4f0ba6" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetCelsiusToFahrenheitResponse>
+         <tem:Temperature>?</tem:Temperature>
+      </tem:GetCelsiusToFahrenheitResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetCelsiusToFahrenheit_Output"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetFahrenheitToCelsius" id="67616250-bab1-4905-9ae0-2d10eb80223e" interface="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" operation="GetFahrenheitToCelsius"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="37e4ad0b-3f75-463e-b823-2b7cc94e36c3" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetFahrenheitToCelsiusResponse>
+         <tem:Temperature>?</tem:Temperature>
+      </tem:GetFahrenheitToCelsiusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetFahrenheitToCelsius_Output"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetWindChilllnCelsius" id="191fa595-37c0-4490-8341-b185ec0c39cc" interface="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" operation="GetWindChilllnCelsius"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="af9cfcbf-dc41-4351-8730-fac84a2e00bf" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetWindChillInCelsiusResponse>
+         <tem:Temperature>?</tem:Temperature>
+      </tem:GetWindChillInCelsiusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetWindChilllnCelsius_Output"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetWindChilllnFahrenheit" id="c95f585b-f8b7-41d0-b345-d6ee2f4fdb23" interface="TemperatureConverterServiceWSMessageSetSOAP_HTTP_Binding" operation="GetWindChilllnFahrenheit"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="4339a422-c1c5-46c9-9251-4007b60cd504" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/TemperatureConverterServiceWSMessageSet">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetWindChillInFahrenheitResponse>
+         <tem:Temperature>?</tem:Temperature>
+      </tem:GetWindChillInFahrenheitResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TemperatureConverterServiceWSMessageSet/TemperatureConverterServiceWSMessageSetPortType/GetWindChilllnFahrenheit_Output"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
