@@ -3,7 +3,7 @@
 	<name>TemperatureConverterService</name>
 	<comment></comment>
 	<projects>
-		<project>DaehostingTemperatureConverterMessageSet</project>
+		<project>DeahostingWS</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

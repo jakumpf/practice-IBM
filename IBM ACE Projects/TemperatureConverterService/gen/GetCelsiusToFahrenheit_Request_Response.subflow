@@ -9,23 +9,24 @@
       <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="20,20">
         <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="gen/GetCelsiusToFahrenheit_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
-      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="800,14">
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="621,253">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/GetCelsiusToFahrenheit_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="363,17" wsdlFileName="DaehostingTemperatureConverterMessageSet/com/daehosting/webservices/temperature/temperatureconversions.wsdl" selectedPortType="TemperatureConversionsSoapType" selectedBinding="TemperatureConversionsSoapBinding" selectedOperation="CelsiusToFahrenheit" selectedPort="TemperatureConversionsSoap" targetNamespace="http://webservices.daehosting.com/temperature" useHTTPTransport="true"
-          webServiceURL="http://webservices.daehosting.com/services/temperatureconversions.wso" sslProtocol="TLSv1.2" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
+      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="361,24" wsdlFileName="deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions.wsdl" selectedPortType="TemperatureConversionsSoapType" selectedBinding="TemperatureConversionsSoapBinding" selectedOperation="CelsiusToFahrenheit" selectedPort="TemperatureConversionsSoap" targetNamespace="http://webservices.daehosting.com/temperature" useHTTPTransport="true" webServiceURL="http://webservices.daehosting.com/services/temperatureconversions.wso"
+          sslProtocol="TLSv1.2" messageSetProperty="deahostingMessageSet" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
         <translation xmi:type="utility:ConstantString" string="SOAP Request"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="556,15" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapResponse.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="553,25" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapResponse.Main">
         <translation xmi:type="utility:ConstantString" string="MapResponse"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="174,24" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapRequest.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="177,21" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapRequest.Main">
         <translation xmi:type="utility:ConstantString" string="MapRequest"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="OutTerminal.Output" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="OutTerminal.Output" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out1" targetTerminalName="InTerminal.in"/>
     </composition>
     <propertyOrganizer/>
     <stickyBoard/>

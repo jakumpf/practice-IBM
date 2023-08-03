@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmLabel.msgnode="ComIbmLabel.msgnode" xmlns:ComIbmRouteToLabel.msgnode="ComIbmRouteToLabel.msgnode" xmlns:ComIbmSOAPInput.msgnode="ComIbmSOAPInput.msgnode" xmlns:ComIbmSOAPReply.msgnode="ComIbmSOAPReply.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:gen_GetCelsiusToFahrenheit_Request_Response.subflow="gen/GetCelsiusToFahrenheit_Request_Response.subflow"
-    xmlns:gen_TemperatureConverterServiceInputCatchHandler.subflow="gen/TemperatureConverterServiceInputCatchHandler.subflow" xmlns:gen_TemperatureConverterServiceInputFailureHandler.subflow="gen/TemperatureConverterServiceInputFailureHandler.subflow" xmlns:gen_TemperatureConverterServiceInputHTTPTimeoutHandler.subflow="gen/TemperatureConverterServiceInputHTTPTimeoutHandler.subflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="gen/TemperatureConverterService.msgflow" nsPrefix="gen_TemperatureConverterService.msgflow">
+    xmlns:gen_GetFahrenheitToCelsius_Request_Response.subflow="gen/GetFahrenheitToCelsius_Request_Response.subflow" xmlns:gen_GetWindChilllnCelsius_Request_Response.subflow="gen/GetWindChilllnCelsius_Request_Response.subflow" xmlns:gen_GetWindChilllnFahrenheit_Request_Response.subflow="gen/GetWindChilllnFahrenheit_Request_Response.subflow" xmlns:gen_TemperatureConverterServiceInputCatchHandler.subflow="gen/TemperatureConverterServiceInputCatchHandler.subflow" xmlns:gen_TemperatureConverterServiceInputFailureHandler.subflow="gen/TemperatureConverterServiceInputFailureHandler.subflow"
+    xmlns:gen_TemperatureConverterServiceInputHTTPTimeoutHandler.subflow="gen/TemperatureConverterServiceInputHTTPTimeoutHandler.subflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="gen/TemperatureConverterService.msgflow" nsPrefix="gen_TemperatureConverterService.msgflow">
   <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
     <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
     <translation xmi:type="utility:TranslatableString" key="TemperatureConverterService" bundleName="gen/TemperatureConverterService" pluginId="TemperatureConverterService"/>
@@ -32,6 +33,24 @@
       <nodes xmi:type="gen_GetCelsiusToFahrenheit_Request_Response.subflow:FCMComposite_1" xmi:id="FCMComposite_1_8" location="370,310">
         <translation xmi:type="utility:ConstantString" string="GetCelsiusToFahrenheit_Request_Response"/>
       </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="220,390" labelName="GetFahrenheitToCelsius">
+        <translation xmi:type="utility:ConstantString" string="GetFahrenheitToCelsius"/>
+      </nodes>
+      <nodes xmi:type="gen_GetFahrenheitToCelsius_Request_Response.subflow:FCMComposite_1" xmi:id="FCMComposite_1_10" location="370,390">
+        <translation xmi:type="utility:ConstantString" string="GetFahrenheitToCelsius_Request_Response"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="220,470" labelName="GetWindChilllnCelsius">
+        <translation xmi:type="utility:ConstantString" string="GetWindChilllnCelsius"/>
+      </nodes>
+      <nodes xmi:type="gen_GetWindChilllnCelsius_Request_Response.subflow:FCMComposite_1" xmi:id="FCMComposite_1_12" location="370,470">
+        <translation xmi:type="utility:ConstantString" string="GetWindChilllnCelsius_Request_Response"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="220,550" labelName="GetWindChilllnFahrenheit">
+        <translation xmi:type="utility:ConstantString" string="GetWindChilllnFahrenheit"/>
+      </nodes>
+      <nodes xmi:type="gen_GetWindChilllnFahrenheit_Request_Response.subflow:FCMComposite_1" xmi:id="FCMComposite_1_14" location="370,550">
+        <translation xmi:type="utility:ConstantString" string="GetWindChilllnFahrenheit_Request_Response"/>
+      </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Input"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
@@ -41,6 +60,12 @@
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_11" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_12" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_11" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_13" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_12" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_13" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_15" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
     </composition>
     <propertyOrganizer/>
     <stickyBoard>

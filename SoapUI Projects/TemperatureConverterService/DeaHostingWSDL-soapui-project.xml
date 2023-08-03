@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9340e464-7a43-4de0-9fe0-0f67432d29ea" activeEnvironment="Default" name="DeaHostingWSDL" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2253367c-bd84-4a6e-a11e-ca4c6dde6e11" wsaVersion="NONE" name="TemperatureConversionsSoapBinding12" type="wsdl" bindingName="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding12" soapVersion="1_2" anonymous="optional" definition="http://webservices.daehosting.com/services/temperatureconversions.wso?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint></con:endpoints><con:operation id="41e6cb48-ff28-42f7-8bc1-521e6d62ed6f" isOneWay="false" action="" name="CelsiusToFahrenheit" bindingOperationName="CelsiusToFahrenheit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="161380e5-fd8a-4b35-8d36-ba8f32029e11" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:CelsiusToFahrenheit>\r
+         <tem:nCelsius>?</tem:nCelsius>\r
+      </tem:CelsiusToFahrenheit>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/CelsiusToFahrenheitRequest"/></con:call></con:operation><con:operation id="7ebb1e7f-063b-4239-baf2-b58c1805690e" isOneWay="false" action="" name="FahrenheitToCelsius" bindingOperationName="FahrenheitToCelsius" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df46453a-c097-4f49-8def-1835e640b09b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:FahrenheitToCelsius>\r
+         <tem:nFahrenheit>?</tem:nFahrenheit>\r
+      </tem:FahrenheitToCelsius>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/FahrenheitToCelsiusRequest"/></con:call></con:operation><con:operation id="38be6eb9-0339-40a9-8199-24c681cc0f79" isOneWay="false" action="" name="WindChillInCelsius" bindingOperationName="WindChillInCelsius" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="95d0ff56-0130-4f40-adad-92d60f8c250b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:WindChillInCelsius>\r
+         <tem:nCelsius>?</tem:nCelsius>\r
+         <tem:nWindSpeed>?</tem:nWindSpeed>\r
+      </tem:WindChillInCelsius>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInCelsiusRequest"/></con:call></con:operation><con:operation id="487b80d3-36b3-45c4-ab44-6d18bb5b2792" isOneWay="false" action="" name="WindChillInFahrenheit" bindingOperationName="WindChillInFahrenheit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ae401fa6-7981-4bb9-8f05-52d936fdf027" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:WindChillInFahrenheit>\r
+         <tem:nFahrenheit>?</tem:nFahrenheit>\r
+         <tem:nWindSpeed>?</tem:nWindSpeed>\r
+      </tem:WindChillInFahrenheit>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInFahrenheitRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d1897955-a436-4307-a63b-6bc07feb5fd5" wsaVersion="NONE" name="TemperatureConversionsSoapBinding" type="wsdl" bindingName="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://webservices.daehosting.com/services/temperatureconversions.wso?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://webservices.daehosting.com/services/temperatureconversions.wso?WSDL"><con:part><con:url>http://webservices.daehosting.com/services/temperatureconversions.wso?WSDL</con:url><con:content><![CDATA[<definitions name="TemperatureConversions" targetNamespace="http://webservices.daehosting.com/temperature" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://webservices.daehosting.com/temperature">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://webservices.daehosting.com/temperature">
+      <xs:element name="CelsiusToFahrenheit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nCelsius" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CelsiusToFahrenheitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CelsiusToFahrenheitResult" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FahrenheitToCelsius">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nFahrenheit" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FahrenheitToCelsiusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FahrenheitToCelsiusResult" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WindChillInCelsius">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nCelsius" type="xs:decimal"/>
+            <xs:element name="nWindSpeed" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WindChillInCelsiusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="WindChillInCelsiusResult" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WindChillInFahrenheit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nFahrenheit" type="xs:decimal"/>
+            <xs:element name="nWindSpeed" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WindChillInFahrenheitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="WindChillInFahrenheitResult" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="CelsiusToFahrenheitSoapRequest">
+    <part name="parameters" element="tns:CelsiusToFahrenheit"/>
+  </message>
+  <message name="CelsiusToFahrenheitSoapResponse">
+    <part name="parameters" element="tns:CelsiusToFahrenheitResponse"/>
+  </message>
+  <message name="FahrenheitToCelsiusSoapRequest">
+    <part name="parameters" element="tns:FahrenheitToCelsius"/>
+  </message>
+  <message name="FahrenheitToCelsiusSoapResponse">
+    <part name="parameters" element="tns:FahrenheitToCelsiusResponse"/>
+  </message>
+  <message name="WindChillInCelsiusSoapRequest">
+    <part name="parameters" element="tns:WindChillInCelsius"/>
+  </message>
+  <message name="WindChillInCelsiusSoapResponse">
+    <part name="parameters" element="tns:WindChillInCelsiusResponse"/>
+  </message>
+  <message name="WindChillInFahrenheitSoapRequest">
+    <part name="parameters" element="tns:WindChillInFahrenheit"/>
+  </message>
+  <message name="WindChillInFahrenheitSoapResponse">
+    <part name="parameters" element="tns:WindChillInFahrenheitResponse"/>
+  </message>
+  <portType name="TemperatureConversionsSoapType">
+    <operation name="CelsiusToFahrenheit">
+      <documentation>Converts a Celsius Temperature to a Fahrenheit value</documentation>
+      <input message="tns:CelsiusToFahrenheitSoapRequest"/>
+      <output message="tns:CelsiusToFahrenheitSoapResponse"/>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <documentation>Converts a Fahrenheit Temperature to a Celsius value</documentation>
+      <input message="tns:FahrenheitToCelsiusSoapRequest"/>
+      <output message="tns:FahrenheitToCelsiusSoapResponse"/>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <documentation>Windchill temperature calculated with the formula of Steadman</documentation>
+      <input message="tns:WindChillInCelsiusSoapRequest"/>
+      <output message="tns:WindChillInCelsiusSoapResponse"/>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <documentation>Windchill temperature calculated with the formula of Steadman</documentation>
+      <input message="tns:WindChillInFahrenheitSoapRequest"/>
+      <output message="tns:WindChillInFahrenheitSoapResponse"/>
+    </operation>
+  </portType>
+  <binding name="TemperatureConversionsSoapBinding" type="tns:TemperatureConversionsSoapType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CelsiusToFahrenheit">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TemperatureConversionsSoapBinding12" type="tns:TemperatureConversionsSoapType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CelsiusToFahrenheit">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="TemperatureConversions">
+    <documentation>DataFlex Web Service to convert temperature values between Celsius and Fahrenheit</documentation>
+    <port name="TemperatureConversionsSoap" binding="tns:TemperatureConversionsSoapBinding">
+      <soap:address location="http://webservices.daehosting.com/services/temperatureconversions.wso"/>
+    </port>
+    <port name="TemperatureConversionsSoap12" binding="tns:TemperatureConversionsSoapBinding12">
+      <soap12:address location="http://webservices.daehosting.com/services/temperatureconversions.wso"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://2V9M3X2:8088/mockTemperatureConversionsSoapBinding</con:endpoint><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint></con:endpoints><con:operation id="7ac5f035-a83a-44fe-a7c7-93c93b372cc7" isOneWay="false" action="" name="CelsiusToFahrenheit" bindingOperationName="CelsiusToFahrenheit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="82a5941c-5184-4cca-a283-6f8f0b8c13e9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:CelsiusToFahrenheit>\r
+         <tem:nCelsius>10</tem:nCelsius>\r
+      </tem:CelsiusToFahrenheit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/CelsiusToFahrenheitRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="94186517-de86-47ce-ba0f-c62ef0f96c22" isOneWay="false" action="" name="FahrenheitToCelsius" bindingOperationName="FahrenheitToCelsius" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7fb3372f-9870-4144-8af3-19cec46097eb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:FahrenheitToCelsius>\r
+         <tem:nFahrenheit>?</tem:nFahrenheit>\r
+      </tem:FahrenheitToCelsius>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/FahrenheitToCelsiusRequest"/></con:call></con:operation><con:operation id="32561fd7-a846-41e0-8b07-2ac72f2e0a71" isOneWay="false" action="" name="WindChillInCelsius" bindingOperationName="WindChillInCelsius" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2c725478-8b7a-4a08-90e1-df33b234ef6b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:WindChillInCelsius>\r
+         <tem:nCelsius>10.5</tem:nCelsius>\r
+         <tem:nWindSpeed>20.5</tem:nWindSpeed>\r
+      </tem:WindChillInCelsius>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInCelsiusRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1a57150e-afbf-446c-babc-dd8e52ef71b6" isOneWay="false" action="" name="WindChillInFahrenheit" bindingOperationName="WindChillInFahrenheit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="02f59621-59c3-41e9-b76d-177d393e8751" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.daehosting.com/services/temperatureconversions.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:WindChillInFahrenheit>\r
+         <tem:nFahrenheit>12</tem:nFahrenheit>\r
+         <tem:nWindSpeed>12</tem:nWindSpeed>\r
+      </tem:WindChillInFahrenheit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInFahrenheitRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="fcfa0bbe-228e-487c-8aaa-720bb9033de5" port="8088" path="/mockTemperatureConversionsSoapBinding" host="2V9M3X2" name="TemperatureConversionsSoapBinding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="CelsiusToFahrenheit" id="58beec2a-b6c7-4bb3-b2e3-f6b45107f385" interface="TemperatureConversionsSoapBinding" operation="CelsiusToFahrenheit"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="a422608c-11f0-4bda-9b2e-6dace32827c1" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CelsiusToFahrenheitResponse>
+         <tem:CelsiusToFahrenheitResult>?</tem:CelsiusToFahrenheitResult>
+      </tem:CelsiusToFahrenheitResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/CelsiusToFahrenheitResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="FahrenheitToCelsius" id="28a402ab-3593-49c5-910c-2a5fe8308af3" interface="TemperatureConversionsSoapBinding" operation="FahrenheitToCelsius"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="6a3dba93-64ea-4bc0-a912-7bae485bd0c8" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:FahrenheitToCelsiusResponse>
+         <tem:FahrenheitToCelsiusResult>?</tem:FahrenheitToCelsiusResult>
+      </tem:FahrenheitToCelsiusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/FahrenheitToCelsiusResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="WindChillInCelsius" id="8c92f41c-689b-45d5-942a-5689d09558b7" interface="TemperatureConversionsSoapBinding" operation="WindChillInCelsius"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="12fee6c7-5669-45fc-88e3-dbbfb4071363" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:WindChillInCelsiusResponse>
+         <tem:WindChillInCelsiusResult>?</tem:WindChillInCelsiusResult>
+      </tem:WindChillInCelsiusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInCelsiusResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="WindChillInFahrenheit" id="16fb890a-08b9-4333-b4af-525d06ff9267" interface="TemperatureConversionsSoapBinding" operation="WindChillInFahrenheit"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="4a88463e-9e67-40aa-8566-c087d300577c" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://webservices.daehosting.com/temperature">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:WindChillInFahrenheitResponse>
+         <tem:WindChillInFahrenheitResult>?</tem:WindChillInFahrenheitResult>
+      </tem:WindChillInFahrenheitResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.daehosting.com/temperature/TemperatureConversionsSoapType/WindChillInFahrenheitResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

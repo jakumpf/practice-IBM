@@ -1,0 +1,14 @@
+BROKER SCHEMA gen
+
+CREATE FUNCTION requestValidate (IN input REFERENCE, OUT error REFERENCE)
+		BEGIN
+			SET error.errorId = 1;
+			SET error.errorMessage = 'Request is NULL';
+			SET error.errorDetails = '400';
+		END;
+CREATE FUNCTION inputValidation(INOUT errorMessage REFERENCE, IN input REFERENCE)
+		BEGIN
+		IF input.nstc:Temperature is NULL THEN
+			SET errorMessage='Temperature is empty';
+		END IF;
+		END;

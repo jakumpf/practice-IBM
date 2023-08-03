@@ -1,3 +1,3 @@
-# practice-IBM
+# Practice-IBM
 
-soap rest project
+Repozytorium zawiera przykładowe projekty, które stworzyłem podczas nauki

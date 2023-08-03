@@ -8,13 +8,19 @@
         </service:flows>
       </service:operation>
       <service:operation name="GetWindChilllnCelsius" type="request-response">
-        <service:flows/>
+        <service:flows>
+          <service:flow location="gen/GetWindChilllnCelsius_Request_Response.subflow" type="Request_Response"/>
+        </service:flows>
       </service:operation>
       <service:operation name="GetFahrenheitToCelsius" type="request-response">
-        <service:flows/>
+        <service:flows>
+          <service:flow location="gen/GetFahrenheitToCelsius_Request_Response.subflow" type="Request_Response"/>
+        </service:flows>
       </service:operation>
       <service:operation name="GetWindChilllnFahrenheit" type="request-response">
-        <service:flows/>
+        <service:flows>
+          <service:flow location="gen/GetWindChilllnFahrenheit_Request_Response.subflow" type="Request_Response"/>
+        </service:flows>
       </service:operation>
     </service:operations>
     <service:errors>

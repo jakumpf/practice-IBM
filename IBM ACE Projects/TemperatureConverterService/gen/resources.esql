@@ -1,0 +1,4 @@
+BROKER SCHEMA gen
+
+DECLARE nsdh NAMESPACE 'http://webservices.daehosting.com/temperature';
+DECLARE nstc NAMESPACE 'http://tempuri.org/TemperatureConverterServiceWSMessageSet';

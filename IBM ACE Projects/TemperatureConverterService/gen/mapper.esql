@@ -1,0 +1,23 @@
+BROKER SCHEMA gen
+
+CREATE FUNCTION requestMapCelsius(IN input REFERENCE, INOUT output REFERENCE)
+		BEGIN
+			SET output.nsdh:nCelsius = input.nstc:Temperature;
+		END;
+		
+CREATE FUNCTION requestMapFahrenheit(IN input REFERENCE, INOUT output REFERENCE)
+		BEGIN
+			SET output.nsdh:nFahrenheit = input.nstc:Temperature;
+		END;
+		
+CREATE FUNCTION requestWindChilllnCelsius(IN input REFERENCE, INOUT output REFERENCE)
+		BEGIN
+			SET output.nsdh:nCelsius = input.nstc:Temperature;
+			SET output.nsdh:nWindSpeed = input.nstc:WindSpeed;
+		END;
+		
+CREATE FUNCTION requestWindChilllnFahrenheit(IN input REFERENCE, INOUT output REFERENCE)
+		BEGIN
+			SET output.nsdh:nFahrenheit = input.nstc:Temperature;
+			SET output.nsdh:nWindSpeed = input.nstc:WindSpeed;
+		END;
