@@ -6,7 +6,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/TemperatureConverterService/icons/full/obj16/GetWindChilllnCelsius_Request_Response.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/TemperatureConverterService/icons/full/obj30/GetWindChilllnCelsius_Request_Response.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="608,25" computeExpression="esql://routine/gen#GetWindChilllnCelsius_Request_Response_MapResponse.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="608,25" computeExpression="esql://routine/gen#GetWindChilllnCelsius_MapResponse.Main">
         <translation xmi:type="utility:ConstantString" string="MapResponse"/>
       </nodes>
       <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="416,24" wsdlFileName="deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions.wsdl" selectedPortType="TemperatureConversionsSoapType" selectedBinding="TemperatureConversionsSoapBinding" selectedOperation="WindChillInCelsius" selectedPort="TemperatureConversionsSoap" targetNamespace="http://webservices.daehosting.com/temperature" useHTTPTransport="true" webServiceURL="http://webservices.daehosting.com/services/temperatureconversions.wso"
@@ -19,7 +19,7 @@
       <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="686,254">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/GetWindChilllnCelsius_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="232,21" computeExpression="esql://routine/gen#GetWindChilllnCelsius_Request_Response_MapRequest.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="232,21" computeExpression="esql://routine/gen#GetWindChilllnCelsius_MapRequest.Main">
         <translation xmi:type="utility:ConstantString" string="MapRequest"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_17" targetNode="FCMComposite_1_12" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

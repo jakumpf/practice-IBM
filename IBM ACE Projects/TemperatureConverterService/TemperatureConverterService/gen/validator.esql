@@ -8,7 +8,7 @@ CREATE FUNCTION requestValidate (IN input REFERENCE, OUT error REFERENCE)
 		END;
 CREATE FUNCTION inputValidation(INOUT errorMessage REFERENCE, IN input REFERENCE)
 		BEGIN
-		IF input.nstc:Temperature is NULL THEN
+		IF input.nstc:Temperature IS NULL THEN
 			SET errorMessage='Temperature is empty';
 		END IF;
 		END;

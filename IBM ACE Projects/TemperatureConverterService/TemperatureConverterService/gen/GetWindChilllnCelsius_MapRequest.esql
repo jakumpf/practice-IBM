@@ -1,6 +1,6 @@
 BROKER SCHEMA gen
 
-CREATE COMPUTE MODULE GetWindChilllnCelsius_Request_Response_MapRequest
+CREATE COMPUTE MODULE GetWindChilllnCelsius_MapRequest
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		

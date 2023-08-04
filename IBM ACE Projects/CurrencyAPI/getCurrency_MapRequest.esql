@@ -7,7 +7,7 @@ CREATE COMPUTE MODULE getCurrency_MapRequest
 		SET Environment.Variables.JSON.Data = inputReq;
 		CALL inputValidation(errorMessageRef,inputReq);
 		
-		IF errorMessage is NULL THEN
+		IF errorMessage IS NULL THEN
 			SET OutputRoot.JSON.Data.currency=inputReq.currency;
 			SET OutputRoot.Properties.CodedCharSetId = 1208;
 	   		SET OutputRoot.Properties.Encoding = 546;
@@ -21,9 +21,10 @@ CREATE COMPUTE MODULE getCurrency_MapRequest
 			PROPAGATE TO TERMINAL 'out1';
 		END IF;	
 	END;
+	
 	CREATE FUNCTION inputValidation(INOUT errorMessage REFERENCE, IN inputReq REFERENCE)
 		BEGIN
-		IF inputReq.currency is NULL THEN
+		IF inputReq.currency IS NULL THEN
 			SET errorMessage = 'Currency is empty';
 		END IF;
 	END;

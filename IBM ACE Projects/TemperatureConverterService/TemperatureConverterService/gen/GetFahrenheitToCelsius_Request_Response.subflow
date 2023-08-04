@@ -6,10 +6,10 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/TemperatureConverterService/icons/full/obj16/GetFahrenheitToCelsius_Request_Response"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/TemperatureConverterService/icons/full/obj30/GetFahrenheitToCelsius_Request_Response"/>
     <composition>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="183,32" computeExpression="esql://routine/gen#GetFahrenheitToCelsius_Request_Response_MapRequest.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="183,32" computeExpression="esql://routine/gen#GetFahrenheitToCelsius_MapRequest.Main">
         <translation xmi:type="utility:ConstantString" string="MapRequest"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="594,35" computeExpression="esql://routine/gen#GetFahrenheitToCelsius_Request_Response_MapResponse.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="594,35" computeExpression="esql://routine/gen#GetFahrenheitToCelsius_MapResponse.Main">
         <translation xmi:type="utility:ConstantString" string="MapResponse"/>
       </nodes>
       <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="2,32">

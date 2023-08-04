@@ -16,10 +16,10 @@
           sslProtocol="TLSv1.2" messageSetProperty="deahostingMessageSet" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
         <translation xmi:type="utility:ConstantString" string="SOAP Request"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="553,25" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapResponse.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="553,25" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_MapResponse.Main">
         <translation xmi:type="utility:ConstantString" string="MapResponse"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="177,21" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_Request_Response_MapRequest.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="177,21" computeExpression="esql://routine/gen#GetCelsiusToFahrenheit_MapRequest.Main">
         <translation xmi:type="utility:ConstantString" string="MapRequest"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

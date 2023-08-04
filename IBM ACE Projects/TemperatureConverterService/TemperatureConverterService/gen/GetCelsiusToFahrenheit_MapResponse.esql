@@ -1,6 +1,6 @@
 BROKER SCHEMA gen
 
-CREATE COMPUTE MODULE GetCelsiusToFahrenheit_Request_Response_MapResponse
+CREATE COMPUTE MODULE GetCelsiusToFahrenheit_MapResponse
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		

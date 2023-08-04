@@ -7,9 +7,9 @@ CREATE COMPUTE MODULE postGetCurrencies_MapResponse
 		DECLARE i INTEGER 1;
 		DECLARE currencies CHAR;
 		
-		  FOR elementCurreny AS Environment.Variables.JSON.Data.Item[] DO
-            IF currencies IS NULL THEN
-                SET currencies = elementCurreny.currency;
+		 FOR elementCurreny AS Environment.Variables.JSON.Data.Item[] DO
+         	IF currencies IS NULL THEN
+         		SET currencies = elementCurreny.currency;
             ELSE
                 SET currencies = COALESCE(currencies,'') || ',' || elementCurreny.currency;
             END IF;
