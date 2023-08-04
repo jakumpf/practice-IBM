@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://schemas.xmlsoap.org/wsdl/" name="TemperatureConversions" targetNamespace="http://webservices.daehosting.com/temperature" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://webservices.daehosting.com/temperature" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <documentation>
+    <appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedMXSD location="temperatureconversions_InlineSchema1.mxsd"/>
+        <binding hasEncoding="false" imported="true" name="TemperatureConversionsSoapBinding" originalBindingStyle="document"/>
+        <binding hasEncoding="false" imported="true" name="TemperatureConversionsSoapBinding12" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </appinfo>
+  </documentation>
+  <types>
+    
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservices.daehosting.com/temperature">
+      <xsd:include schemaLocation="temperatureconversions_InlineSchema1.mxsd"/>
+    </xsd:schema>
+    </types>
+  <message name="CelsiusToFahrenheitSoapRequest">
+    <part element="tns:CelsiusToFahrenheit" name="parameters"/>
+  </message>
+  <message name="CelsiusToFahrenheitSoapResponse">
+    <part element="tns:CelsiusToFahrenheitResponse" name="parameters"/>
+  </message>
+  <message name="FahrenheitToCelsiusSoapRequest">
+    <part element="tns:FahrenheitToCelsius" name="parameters"/>
+  </message>
+  <message name="FahrenheitToCelsiusSoapResponse">
+    <part element="tns:FahrenheitToCelsiusResponse" name="parameters"/>
+  </message>
+  <message name="WindChillInCelsiusSoapRequest">
+    <part element="tns:WindChillInCelsius" name="parameters"/>
+  </message>
+  <message name="WindChillInCelsiusSoapResponse">
+    <part element="tns:WindChillInCelsiusResponse" name="parameters"/>
+  </message>
+  <message name="WindChillInFahrenheitSoapRequest">
+    <part element="tns:WindChillInFahrenheit" name="parameters"/>
+  </message>
+  <message name="WindChillInFahrenheitSoapResponse">
+    <part element="tns:WindChillInFahrenheitResponse" name="parameters"/>
+  </message>
+  <portType name="TemperatureConversionsSoapType">
+    <operation name="CelsiusToFahrenheit">
+      <documentation>Converts a Celsius Temperature to a Fahrenheit value</documentation>
+      <input message="tns:CelsiusToFahrenheitSoapRequest"/>
+      <output message="tns:CelsiusToFahrenheitSoapResponse"/>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <documentation>Converts a Fahrenheit Temperature to a Celsius value</documentation>
+      <input message="tns:FahrenheitToCelsiusSoapRequest"/>
+      <output message="tns:FahrenheitToCelsiusSoapResponse"/>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <documentation>Windchill temperature calculated with the formula of Steadman</documentation>
+      <input message="tns:WindChillInCelsiusSoapRequest"/>
+      <output message="tns:WindChillInCelsiusSoapResponse"/>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <documentation>Windchill temperature calculated with the formula of Steadman</documentation>
+      <input message="tns:WindChillInFahrenheitSoapRequest"/>
+      <output message="tns:WindChillInFahrenheitSoapResponse"/>
+    </operation>
+  </portType>
+  <binding name="TemperatureConversionsSoapBinding" type="tns:TemperatureConversionsSoapType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CelsiusToFahrenheit">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TemperatureConversionsSoapBinding12" type="tns:TemperatureConversionsSoapType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CelsiusToFahrenheit">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="FahrenheitToCelsius">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInCelsius">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WindChillInFahrenheit">
+      <soap12:operation soapAction="" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="TemperatureConversions">
+    <documentation>DataFlex Web Service to convert temperature values between Celsius and Fahrenheit</documentation>
+    <port binding="tns:TemperatureConversionsSoapBinding" name="TemperatureConversionsSoap">
+      <soap:address location="http://webservices.daehosting.com/services/temperatureconversions.wso"/>
+    </port>
+    <port binding="tns:TemperatureConversionsSoapBinding12" name="TemperatureConversionsSoap12">
+      <soap12:address location="http://webservices.daehosting.com/services/temperatureconversions.wso"/>
+    </port>
+  </service>
+</definitions>

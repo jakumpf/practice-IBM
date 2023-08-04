@@ -16,7 +16,7 @@
       <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="75,20">
         <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="gen/GetWindChilllnCelsius_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
-      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="676,253">
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="686,254">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/GetWindChilllnCelsius_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="232,21" computeExpression="esql://routine/gen#GetWindChilllnCelsius_Request_Response_MapRequest.Main">

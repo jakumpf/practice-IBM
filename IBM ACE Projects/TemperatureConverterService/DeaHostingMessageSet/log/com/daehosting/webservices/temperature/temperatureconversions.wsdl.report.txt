@@ -1,0 +1,41 @@
+
+
+Importing file: \services\temperatureconversions.wsdl
+
+BIP0224W The message set has no XML Wire Format layer defined. Only the logical information will appear in the model.
+The WSDL import will proceed with bindings TemperatureConversionsSoapBinding, TemperatureConversionsSoapBinding12.
+Creating wsdl schema document for RemoteFiles/com/daehosting/webservices/temperature/temperatureconversions.mxsd.
+Parsing wsdl binding {http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding.
+Parsing wsdl binding input CelsiusToFahrenheit.
+Parsing wsdl binding output CelsiusToFahrenheit.
+Parsing wsdl binding input FahrenheitToCelsius.
+Parsing wsdl binding output FahrenheitToCelsius.
+Parsing wsdl binding input WindChillInCelsius.
+Parsing wsdl binding output WindChillInCelsius.
+Parsing wsdl binding input WindChillInFahrenheit.
+Parsing wsdl binding output WindChillInFahrenheit.
+Parsing wsdl binding {http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding12.
+Parsing wsdl binding input CelsiusToFahrenheit.
+Parsing wsdl binding output CelsiusToFahrenheit.
+Parsing wsdl binding input FahrenheitToCelsius.
+Parsing wsdl binding output FahrenheitToCelsius.
+Parsing wsdl binding input WindChillInCelsius.
+Parsing wsdl binding output WindChillInCelsius.
+Parsing wsdl binding input WindChillInFahrenheit.
+Parsing wsdl binding output WindChillInFahrenheit.
+Processing doc style for operation CelsiusToFahrenheit.
+Processing doc style for operation FahrenheitToCelsius.
+Processing doc style for operation WindChillInCelsius.
+Processing doc style for operation WindChillInFahrenheit.
+Populating WSDL schema deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions.mxsd.
+Creating file deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions.mxsd in the workspace.
+Creating file deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions_InlineSchema1.mxsd in the workspace.
+Copying source WSDL temperatureconversions.wso?wsdl to temperatureconversions.wsdl.
+
+Elapsed time processing this message definition file: 0.212 seconds
+Number of warnings for this message definition file: 1
+
+
+Number of files processed: 1
+
+

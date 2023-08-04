@@ -3,8 +3,10 @@ BROKER SCHEMA gen
 CREATE COMPUTE MODULE GetCelsiusToFahrenheit_Request_Response_MapResponse
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
+		
 		DECLARE input REFERENCE TO InputRoot.SOAP.Body.nsdh:CelsiusToFahrenheitResponse;
 		SET OutputRoot.XMLNSC.nstc:GetCelsiusToFahrenheitResponse.nstc:Temperature = input.nsdh:CelsiusToFahrenheitResult;
 		RETURN TRUE;
+		
 	END;
 END MODULE;

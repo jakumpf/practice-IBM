@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservices.daehosting.com/temperature" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://webservices.daehosting.com/temperature">
+      <xsd:element name="CelsiusToFahrenheit">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.34" schemaObject="/0/CelsiusToFahrenheit;XSDElementDeclaration"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nCelsius" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CelsiusToFahrenheitResponse">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.35" schemaObject="/0/CelsiusToFahrenheitResponse;XSDElementDeclaration=1"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CelsiusToFahrenheitResult" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FahrenheitToCelsius">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.36" schemaObject="/0/FahrenheitToCelsius;XSDElementDeclaration=2"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nFahrenheit" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FahrenheitToCelsiusResponse">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.37" schemaObject="/0/FahrenheitToCelsiusResponse;XSDElementDeclaration=3"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="FahrenheitToCelsiusResult" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WindChillInCelsius">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.38" schemaObject="/0/WindChillInCelsius;XSDElementDeclaration=4"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nCelsius" type="xsd:decimal"/>
+            <xsd:element name="nWindSpeed" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WindChillInCelsiusResponse">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.39" schemaObject="/0/WindChillInCelsiusResponse;XSDElementDeclaration=5"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="WindChillInCelsiusResult" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WindChillInFahrenheit">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.40" schemaObject="/0/WindChillInFahrenheit;XSDElementDeclaration=6"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nFahrenheit" type="xsd:decimal"/>
+            <xsd:element name="nWindSpeed" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WindChillInFahrenheitResponse">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="//%.41" schemaObject="/0/WindChillInFahrenheitResponse;XSDElementDeclaration=7"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="WindChillInFahrenheitResult" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>

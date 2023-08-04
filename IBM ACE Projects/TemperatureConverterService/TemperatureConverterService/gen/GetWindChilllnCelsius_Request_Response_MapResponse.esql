@@ -1,11 +1,12 @@
 BROKER SCHEMA gen
 
-
 CREATE COMPUTE MODULE GetWindChilllnCelsius_Request_Response_MapResponse
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
+		
 		DECLARE input REFERENCE TO InputRoot.SOAP.Body.nsdh:WindChillInCelsiusResponse;
 		SET OutputRoot.XMLNSC.nstc:GetWindChillInCelsiusResponse.nstc:Temperature = input.nsdh:WindChillInCelsiusResult;
 		RETURN TRUE;
+		
 	END;
 END MODULE;

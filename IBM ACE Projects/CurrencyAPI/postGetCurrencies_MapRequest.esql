@@ -1,0 +1,19 @@
+CREATE COMPUTE MODULE postGetCurrencies_MapRequest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		IF EXISTS(InputRoot.JSON.Data.Item[]) THEN
+			SET OutputRoot.JSON.Data = InputRoot.JSON.Data;
+			SET Environment.Variables.JSON.Data = OutputRoot.JSON.Data;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+	   		SET OutputRoot.Properties.Encoding = 546;
+	   		SET OutputRoot.HTTPRequestHeader."Content-Type" = 'application/json; charset=utf-8';
+			RETURN TRUE;
+		ELSE
+			SET OutputRoot.JSON.Data.errorId = 1;
+			SET OutputRoot.JSON.Data.errorMessage = 'Currency is empty';
+			SET OutputRoot.JSON.Data.errorDetails = '400';
+			SET OutputLocalEnvironment.Destination.HTTP.ReplyStatusCode = 400;
+			PROPAGATE TO TERMINAL 'out1';
+		END IF;
+	END;	
+END MODULE;

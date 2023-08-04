@@ -9,7 +9,7 @@
       <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="20,20">
         <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="gen/GetCelsiusToFahrenheit_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
-      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="621,253">
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="629,253">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/GetCelsiusToFahrenheit_Request_Response" pluginId="TemperatureConverterService"/>
       </nodes>
       <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="361,24" wsdlFileName="deahostingMessageSet/com/daehosting/webservices/temperature/temperatureconversions.wsdl" selectedPortType="TemperatureConversionsSoapType" selectedBinding="TemperatureConversionsSoapBinding" selectedOperation="CelsiusToFahrenheit" selectedPort="TemperatureConversionsSoap" targetNamespace="http://webservices.daehosting.com/temperature" useHTTPTransport="true" webServiceURL="http://webservices.daehosting.com/services/temperatureconversions.wso"

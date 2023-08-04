@@ -1,19 +1,20 @@
 BROKER SCHEMA gen
 
-
-CREATE COMPUTE MODULE GetWindChilllnFahrenheit_Request_Response_MapRequest
+CREATE COMPUTE MODULE GetWindChilllnCelsius_Request_Response_MapRequest
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		DECLARE input REFERENCE TO InputRoot.XMLNSC.nstc:GetWindChillInFahrenheitRequest;
-		CREATE FIELD OutputRoot.XMLNSC.nsdh:WindChillInFahrenheit;
-		DECLARE output REFERENCE TO OutputRoot.XMLNSC.nsdh:WindChillInFahrenheit;
+		
+		CREATE FIELD OutputRoot.XMLNSC.nsdh:WindChillInCelsius;
+		
+		DECLARE input REFERENCE TO InputRoot.XMLNSC.nstc:GetWindChillInCelsiusRequest;
+		DECLARE output REFERENCE TO OutputRoot.XMLNSC.nsdh:WindChillInCelsius;
 		DECLARE errorMessage CHAR;
 		DECLARE errorMessageRef REFERENCE TO errorMessage;
 		
 		CALL inputValidation(errorMessageRef,input);
 		
-		IF errorMessage is NULL THEN
-			CALL requestWindChilllnFahrenheit(input,output);
+		IF errorMessage IS NULL THEN
+			CALL requestWindChilllnCelsius(input,output);
 			PROPAGATE TO TERMINAL 'out';
 			RETURN FALSE;
 		ELSE
@@ -22,6 +23,7 @@ CREATE COMPUTE MODULE GetWindChilllnFahrenheit_Request_Response_MapRequest
 			CALL requestValidate(input,error);
 			PROPAGATE TO TERMINAL 'out1';
 			RETURN FALSE;
-		END IF;		
+		END IF;
+		
 	END;
 END MODULE;

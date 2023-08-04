@@ -1,0 +1,23 @@
+CREATE COMPUTE MODULE getCurrency_MapResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE i INTEGER 1;
+		DECLARE isFind BOOLEAN FALSE;
+		FOR elementMock AS InputRoot.JSON.Data.Item[] DO
+			IF Environment.Variables.JSON.Data.currency = elementMock.currency THEN
+				SET isFind = TRUE;
+				SET OutputRoot.JSON.Data.Currency = elementMock.currency;
+				SET OutputRoot.JSON.Data.Amount = CAST(elementMock.amount AS DECIMAL);
+				RETURN TRUE;
+			END IF;
+			SET i = i + 1;
+		END FOR;
+		IF isFind = FALSE THEN
+			SET OutputRoot.JSON.Data.errorId = 2;
+			SET OutputRoot.JSON.Data.errorMessage = 'Bad Currency - ' || Environment.Variables.JSON.Data.currency;
+			SET OutputRoot.JSON.Data.errorDetails = '500';
+			SET OutputLocalEnvironment.Destination.HTTP.ReplyStatusCode = 500;
+			PROPAGATE TO TERMINAL 'out';
+		END IF;
+	END;		
+END MODULE;

@@ -1,0 +1,45 @@
+CREATE COMPUTE MODULE postGetCurrencies_MapResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CREATE FIELD OutputRoot.JSON.Data IDENTITY(JSON.Array); 
+		
+		DECLARE isFind BOOLEAN FALSE;
+		DECLARE i INTEGER 1;
+		DECLARE currencies CHAR;
+		
+		  FOR elementCurreny AS Environment.Variables.JSON.Data.Item[] DO
+            IF currencies IS NULL THEN
+                SET currencies = elementCurreny.currency;
+            ELSE
+                SET currencies = COALESCE(currencies,'') || ',' || elementCurreny.currency;
+            END IF;
+        END FOR;
+        		
+		FOR element AS Environment.Variables.JSON.Data.Item[] DO
+			DECLARE j INTEGER 1;
+			FOR elementMock AS InputRoot.JSON.Data.Item[] DO
+					IF element.currency = elementMock.currency THEN
+						SET isFind = TRUE;
+						SET OutputRoot.JSON.Data.Item[i].currencies=element.currency;
+						SET OutputRoot.JSON.Data.Item[i].amount= CAST (elementMock.amount AS DECIMAL);	
+						CREATE FIELD OutputRoot.JSON.Data.Item[i].countries IDENTITY(JSON.Array); 
+						FOR countryMock AS elementMock.countries.Item[] DO
+								SET OutputRoot.JSON.Data.Item[i].countries.Item[j].country = countryMock;
+								SET j = j + 1;
+						END FOR;
+						SET i = i + 1;
+					END IF;
+			END FOR;
+		END FOR;
+		
+		IF isFind = FALSE THEN
+			DELETE FIELD OutputRoot.JSON.Data;
+			SET OutputRoot.JSON.Data.errorId = 2;
+			SET OutputRoot.JSON.Data.errorMessage = 'Bad currency - ' || currencies;
+			SET OutputRoot.JSON.Data.errorDetails = '500';
+			SET OutputLocalEnvironment.Destination.HTTP.ReplyStatusCode = 500;
+		END IF;
+		
+		RETURN TRUE;
+	END;		
+END MODULE;
